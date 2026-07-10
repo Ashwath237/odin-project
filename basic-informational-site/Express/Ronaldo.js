@@ -18,8 +18,17 @@ app.get("/hi", (req, res) => {
     res.end(hiHtml);
 });
 
+app.get("/:greeting", (req, res) => {
+    const greeting = fs.readFileSync (`./${req.params.greeting}.html`);
+    res.end(greeting)
+    
+    });
+
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, (error) => {
 if (error) throw error;
 console.log(`Server listening on port ${PORT}!`);
 });
+
