@@ -1,0 +1,13 @@
+const db = require('../db');
+async function getBookbyId(req,res){
+    
+    const bookID = req.params.bookID;
+    const book = await db.getBookbyId(bookID);
+    
+    console.log('BookTitle:', book);
+    console.log('BookId:', bookID);
+    
+    res.send(book);
+
+}
+module.exports = { getBookbyId };
