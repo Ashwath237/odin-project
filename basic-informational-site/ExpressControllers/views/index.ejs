@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+        <h1>Authors</h1>
+        <ul>
+        <% authors.forEach((author) => { %>
+            <li><%= author.name %></li>
+        <% }); %>
+        </ul>
+        
+        <h1>Books</h1>
+        <ul>
+        <% books.forEach((book) => { %>
+            <li><%= book.title %></li>
+        <% }); %>
+        </ul>
+    </body>
+</html>

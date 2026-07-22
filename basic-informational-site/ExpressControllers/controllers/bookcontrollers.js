@@ -7,7 +7,7 @@ async function getBookbyId(req,res){
     console.log('BookTitle:', book);
     console.log('BookId:', bookID);
     
-    res.send(book);
+    res.render('books',{book: book});
 
 }
 module.exports = { getBookbyId };

@@ -7,7 +7,7 @@ async function getAuthorbyId(req,res){
     console.log('Author:', author);
     console.log('AuthorId:', authorId);
     
-    res.send(author);
+    res.render('authors',{author: author});
 
 }
 module.exports = { getAuthorbyId };
